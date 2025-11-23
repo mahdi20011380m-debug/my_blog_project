@@ -1,0 +1,14 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+{% block main %}
+
+<h1 class="title">پست‌های جدید</h1>
+
+<div class="container">
+    {% for p in posts %}
+    {% include "blog/_post.html" with post=p %}
+    {% endfor %}
+</div>
+
+{% endblock %}

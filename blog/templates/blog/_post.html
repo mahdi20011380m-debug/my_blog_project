@@ -1,0 +1,10 @@
+{% load static %}
+
+<div class="post-card">
+    <img src="{% static 'blog/images/' %}{{ post.image }}" alt="post">
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.body }}</p>
+    <a href="{% url 'post_detail' post.id %}" class="btn">مشاهده بیشتر</a>
+
+
+</div>
