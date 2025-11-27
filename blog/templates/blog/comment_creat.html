@@ -1,0 +1,62 @@
+<div class="comments-wrapper" style="direction: rtl;">
+
+    <h2 style="font-size:22px; margin-bottom:20px;">نظرات کاربران</h2>
+
+    <div class="comments-box"
+         style="background:#fff; padding:25px; border-radius:15px;
+                box-shadow:0 3px 15px rgba(0,0,0,0.1); margin-bottom:40px;">
+
+        {% if comments %}
+            {% for c in comments %}
+                <div style="border-bottom:1px solid #eaeaea; padding:15px 0;">
+                    <p style="margin:0; font-weight:600; color:#333;">
+                        {{ c.name }}
+                        <span style="font-size:13px; color:#777;">
+                            • {{ c.created_at|date:"Y-m-d H:i" }}
+                        </span>
+                    </p>
+
+                    <p style="margin-top:8px; line-height:1.9; color:#444;">
+                        {{ c.text }}
+                    </p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p style="color:#666;">هنوز نظری ثبت نشده است.</p>
+        {% endif %}
+    </div>
+
+    <h3 style="font-size:20px; margin-bottom:18px;">ثبت نظر جدید</h3>
+
+    <form method="POST"
+          style="background:white; padding:25px; border-radius:15px;
+                 box-shadow:0 3px 15px rgba(0,0,0,0.1); text-align:right;">
+
+        {% csrf_token %}
+
+        <div style="margin-bottom:15px;">
+            <label style="font-weight:600;">نام:</label>
+            {{ comment_form.name }}
+        </div>
+
+        <div style="margin-bottom:15px;">
+            <label style="font-weight:600;">متن نظر:</label>
+            {{ comment_form.text }}
+        </div>
+
+        <button type="submit"
+                style="
+                    padding: 12px 35px;
+                    background:#4c82ff;
+                    color:white;
+                    border:none; border-radius:10px;
+                    font-size:17px;
+                    cursor:pointer;
+                    width:100%;
+                ">
+            ارسال نظر
+        </button>
+
+    </form>
+
+</div>

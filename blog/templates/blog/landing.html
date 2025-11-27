@@ -15,18 +15,44 @@
 
     <h1 style="margin-bottom: 30px;">به سایت خوش آمدید</h1>
 
-    <a href="{% url 'index' %}" 
+    <div style="text-align:center; margin-top:40px;">
+
+    <a href="{% url 'register' %}"
        style="
-           padding: 12px 30px;
-           background:#4c82ff;
-           color:white;
-           border-radius:10px;
-           text-decoration:none;
-           font-size:18px;
+            display:inline-block;
+            padding:12px 28px;
+            background:#4c82ff;
+            color:#fff;
+            text-decoration:none;
+            border-radius:12px;
+            font-size:18px;
+            font-weight:600;
+            margin:10px;
+            transition:0.2s;
        ">
-       ورود
+        ثبت‌نام
+    </a>
+
+    <a href="{% url 'login' %}"
+       style="
+            display:inline-block;
+            padding:12px 28px;
+            background:#5a5a5a;
+            color:#fff;
+            text-decoration:none;
+            border-radius:12px;
+            font-size:18px;
+            font-weight:600;
+            margin:10px;
+            transition:0.2s;
+       ">
+        ورود
     </a>
 
 </div>
+
+    
+
+
 
 {% endblock %}
