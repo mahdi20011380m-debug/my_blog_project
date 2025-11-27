@@ -32,18 +32,19 @@ def post_detail(request, id):
         "form": form
     })
 
-
 def creat_post(request):
-    if request.method == "POST":
+    if request.method == 'POST':
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect("index")   
+            return redirect('index')
     else:
         form = PostForm()
 
-    return render(request, "blog/create_post.html", {"form": form})
+    return render(request, 'blog/creat_post.html', {'form': form})
 
+
+ 
 
 def regsister_client(request):
     if request.metod=="GET":

@@ -9,33 +9,34 @@
 
     <h1 class="title">ایجاد پست جدید</h1>
 
+    <!-- فرم درست با enctype -->
     <form action="" method="POST" enctype="multipart/form-data"
           style="background:white; padding:30px; border-radius:15px;
                  box-shadow:0 4px 20px rgba(0,0,0,0.1);">
-        
+
         {% csrf_token %}
         {{ form.non_field_errors }}
 
+        <!-- عنوان -->
         <div class="form-group" style="margin-bottom: 20px; text-align:right;">
             <label style="font-weight:600; color:#333;">عنوان:</label>
             {{ form.title }}
         </div>
 
+        <!-- متن پست -->
         <div class="form-group" style="margin-bottom: 20px; text-align:right;">
             <label style="font-weight:600; color:#333;">متن پست:</label>
             {{ form.body }}
         </div>
 
-        
+        <!-- تصویر پست -->
         <div class="form-group" style="margin-bottom: 20px; text-align:right;">
             <label style="font-weight:600; color:#333;">تصویر پست:</label>
-            <input type="file" name="image" accept="image/*"
-                   style="display:block; margin-top:10px; padding:10px;
-                          background:#f4f4f4; border-radius:10px;
-                          border:1px solid #ccc; width:100%;">
+            {{ form.image }}
         </div>
 
-        <button type="submit" 
+        <!-- دکمه ثبت -->
+        <button type="submit"
                 style="padding: 12px 35px; background:#4c82ff; color:white;
                        border:none; border-radius:10px; font-size:17px; cursor:pointer;
                        width: 100%; margin-top:10px;">
