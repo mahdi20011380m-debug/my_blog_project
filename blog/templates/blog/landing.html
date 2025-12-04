@@ -1,58 +1,58 @@
-{% extends "blog/base.html" %}
-{% load static %}
-
-{% block main %}
-
-<div style="
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding-top: 120px;
-    font-family: sans-serif;
-">
-
-    <h1 style="margin-bottom: 30px;">به سایت خوش آمدید</h1>
-
-    <div style="text-align:center; margin-top:40px;">
-
-    <a href="{% url 'register' %}"
-       style="
-            display:inline-block;
-            padding:12px 28px;
-            background:#4c82ff;
-            color:#fff;
-            text-decoration:none;
-            border-radius:12px;
-            font-size:18px;
-            font-weight:600;
-            margin:10px;
-            transition:0.2s;
-       ">
-        ثبت‌نام
-    </a>
-
-    <a href="{% url 'login' %}"
-       style="
-            display:inline-block;
-            padding:12px 28px;
-            background:#5a5a5a;
-            color:#fff;
-            text-decoration:none;
-            border-radius:12px;
-            font-size:18px;
-            font-weight:600;
-            margin:10px;
-            transition:0.2s;
-       ">
-        ورود
-    </a>
-
-</div>
-
-    
-
-
-
-{% endblock %}
+{% extends "blog/base.html" %} 
+{% load static %} 
+ 
+{% block main %} 
+ 
+<div style=" 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    padding-top: 120px; 
+    font-family: sans-serif; 
+"> 
+ 
+    <h1 style="margin-bottom: 30px;">به سایت خوش آمدید</h1> 
+    <div style="text-align:center; margin-top:40px;"> 
+ 
+    <a href="{% url 'register' %}" 
+       style=" 
+            display:inline-block; 
+            padding:12px 28px; 
+            background:#4c82ff; 
+            color:#fff; 
+            text-decoration:none; 
+            border-radius:12px; 
+            font-size:18px; 
+            font-weight:600; 
+            margin:10px; 
+            transition:0.2s; 
+       "> 
+        ثبت‌نام 
+    </a> 
+ 
+    <a href="{% url 'login' %}" 
+       style=" 
+            display:inline-block; 
+            padding:12px 28px; 
+            background:#5a5a5a; 
+            color:#fff; 
+            text-decoration:none; 
+            border-radius:12px; 
+            font-size:18px; 
+            font-weight:600; 
+            margin:10px; 
+            transition:0.2s; 
+       "> 
+        ورود 
+    </a> 
+ 
+</div> 
+ 
+     
+ 
+ 
+ 
+{% endblock %} 
+ 

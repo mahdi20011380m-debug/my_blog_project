@@ -1,51 +1,52 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}سایت{% endblock %}</title>
-
-    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
-</head>
-<body>
-
-
-<nav style="
-    width: 100%;
-    background: #1e3a8a;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1000;
-">
-    <div style="font-size: 20px; font-weight: bold;">
-        لوگوی سایت
-    </div>
-
-    <ul style="
-        list-style: none;
-        display: flex;
-        gap: 25px;
-        margin: 0;
-        padding: 0;
-    ">
-        <li><a href="{% url 'landing' %}" style="color: white; text-decoration: none; font-size: 17px;">خانه</a></li>
-        <li><a href="{% url 'index' %}" style="color: white; text-decoration: none; font-size: 17px;">تماس با ما</a></li>
-        <li><a href="#" style="color: white; text-decoration: none; font-size: 17px;">درباره ما</a></li>
-    </ul>
-</nav>
-
-
-<div style="padding-top: 100px;">
-    {% block main %}{% endblock %}
-</div>
-
-</body>
-</html>
+{% load static %} 
+<!DOCTYPE html> 
+<html lang="fa" dir="rtl"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>{% block title %}سایت{% endblock %}</title> 
+ 
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}"> 
+</head> 
+<body> 
+ 
+ 
+<nav style=" 
+    width: 100%; 
+    background: #1e3a8a;  
+    padding: 15px 20px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    color: white;  
+    position: fixed; 
+    top: 0; 
+    right: 0; 
+    left: 0; 
+    z-index: 1000; 
+"> 
+    <div style="font-size: 20px; font-weight: bold;"> 
+        لوگوی سایت  
+    </div> 
+ 
+    <ul style=" 
+        list-style: none; 
+        display: flex; 
+        gap: 25px; 
+        margin: 0; 
+        padding: 0; 
+    "> 
+        <li><a href="{% url 'landing' %}" style="color: white; text-decoration: none; font-size: 17px;">خانه</a></li> 
+        <li><a href="{% url 'index' %}" style="color: white; text-decoration: none; font-size: 17px;">تماس با ما</a></li> 
+        <li><a href="#" style="color: white; text-decoration: none; font-size: 17px;">درباره ما</a></li> 
+    </ul> 
+</nav> 
+ 
+ 
+<div style="padding-top: 100px;"> 
+    {% block main %}{% endblock %} 
+</div> 
+ 
+</body> 
+</html> 
+ 

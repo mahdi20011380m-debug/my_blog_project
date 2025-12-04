@@ -1,31 +1,32 @@
-{% extends "blog/base.html" %}
-{% load static %}
-
-{% block main %}
-
-<h1 class="title">پست‌های جدید</h1>
-<a href="{% url 'create_post' %}"
-   style="
-        display: block;
-        width: fit-content;
-        margin: 0 auto 40px auto; 
-        padding: 12px 30px;
-        background: #4c82ff;
-        color: white;
-        border-radius: 10px;
-        font-size: 18px;
-        text-decoration: none;
-        transition: 0.2s;
-   ">
-    افزودن پست جدید
-</a>
-
-
-
-<div class="container">
-    {% for p in posts %}
-    {% include "blog/_post.html" with post=p %}
-    {% endfor %}
-</div>
-
-{% endblock %}
+{% extends "blog/base.html" %} 
+{% load static %} 
+ 
+{% block main %} 
+ 
+<h1 class="title">پست‌های جدید</h1> 
+<a href="{% url 'create_post' %}" 
+   style=" 
+        display: block; 
+        width: fit-content; 
+        margin: 0 auto 40px auto;  
+        padding: 12px 30px; 
+        background: #4c82ff; 
+        color: white; 
+        border-radius: 10px; 
+        font-size: 18px; 
+        text-decoration: none; 
+        transition: 0.2s; 
+   "> 
+    افزودن پست جدید 
+</a> 
+ 
+ 
+ 
+<div class="container"> 
+    {% for p in posts %} 
+    {% include "blog/_post.html" with post=p %} 
+    {% endfor %} 
+</div> 
+ 
+{% endblock %}  
+ 
